@@ -1,0 +1,229 @@
+import random
+# zad1
+# a = 0
+# b = 0
+# for i in range(100, 1000):
+#   a += i
+# print(a)
+# zad2
+# for i in range(10,100):
+#   if i % 6 == 0:
+#     a = a + i
+#     b+=1
+# print(a)
+# print(b)
+T = []
+# for i in range(5):
+#   k = random.randint(1000, 9999)
+#   T.append(k)
+#   if T[i] > a:
+#     a = T[i]
+# print(a)
+# zad3
+# c = int(input())
+# while c > 0:
+#   a += c % 10
+#   c = c // 10
+# print(a)
+
+# def max_cyfra(n):
+#     max_cyfra = 0
+#     while n > 0:
+#         cyfra = n % 10
+#         if cyfra > max_cyfra:
+#             max_cyfra = cyfra
+#         n //= 10
+#     return max_cyfra
+  
+# print(max_cyfra(int(input())))
+
+# czy_jestpierwsza(n):
+#     if n <= 1:
+#         return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+# liczba = int(input())
+# if czy_jestpierwsza(liczba):
+#     print("jest pierwsza")
+# else:
+#     print('nie jest pierwsza')
+# zad 5
+# def funkcja(a, b):
+#     while b != 0:
+#         a, b = b, a % b
+#     return a
+# liczba = int(input())
+
+# if funkcja(liczba, 24) == 1:
+#     print("jest względnie pierwsza z 24.")
+# else:
+#     print("nie jest względnie pierwsza z 24.")
+# zad 1
+# def cezar(slowo, klucz):
+#   zakodowane = " "
+#   for i in slowo:
+#     if ord(i) + klucz > ord("z"):
+#      zakodowane += chr(ord(i) + klucz - 26)
+#     else:
+#      zakodowane += chr(ord(i) + klucz)
+#   return zakodowane
+# 
+# print(cezar("slowo", 4))
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+# def dodawanie_ulamkow(a, b, c, d):# czy_jestpierwsza(n):
+#     if n <= 1:
+#         return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+# liczba = int(input())
+# if czy_jestpierwsza(liczba):
+#     print("jest pierwsza")
+# else:
+#     print('nie jest pierwsza')
+# zad 5
+# def funkcja(a, b):
+#     while b != 0:
+#         a, b = b, a % b
+#     return a
+# liczba = int(input())
+
+# if funkcja(liczba, 24) == 1:
+#     print("jest względnie pierwsza z 24.")
+# else:
+#     print("nie jest względnie pierwsza z 24.")
+# zad 1
+# def cezar(slowo, klucz):
+#   zakodowane = " "
+#   for i in slowo:
+#     if ord(i) + klucz > ord("z"):
+#      zakodowane += chr(ord(i) + klucz - 26)
+#     else:
+#      zakodowane += chr(ord(i) + klucz)
+#   return zakodowane
+# 
+# print(cezar("slowo", 4))
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+# def dodawanie_ulamkow(a, b, c, d):
+
+#     licznik = (a * d + b * c) % (b * d)
+#     mianownik = b * d
+
+#     nwd = licznik
+#     while nwd != 0:
+#         nwd, mianownik = mianownik % nwd, nwd
+
+
+#     licznik = (a * d + b * c) % (b * d)
+#     mianownik = b * d
+
+#     nwd = licznik
+#     while nwd != 0:
+#         nwd, mianownik = mianownik % nwd, nwd
+
+#     licznik = licznik // mianownik
+#     mianownik = mianownik // mianownik
+
+#     calkowita = licznik // mianownik
+#     reszta = licznik % mianownik
+
+#     return (licznik, mianownik, calkowita, reszta)
+# print(dodawanie_ulamkow(a, b, c, d))
+
+# def znajdz_nww(a, b):
+#     def nwd(x, y):
+#         while y != 0:
+#             x, y = y, x % y
+#         return x
+#     nww = abs(a * b) // nwd(a, b)
+#     return nww
+  
+# liczba1 = int(input())
+# liczba2 = int(input())
+
+# nww = znajdz_nww(liczba1, liczba2)
+
+# print(nww)
+
+# Oblicz wartość ONP - 8822+/234-- przedstaw obliczenia
+# stos:
+# 8
+# 8, 8
+# 8, 8,2
+# 8, 10
+# 0.8, 2
+# 0.8, 2, 3, 4
+# 0,8, 2, 12
+# 0.8, 0.1667
+# 0.6333
+# 0
+
+# Znajdź postać ONP dla pisanego wyrażenia - (3+8)/4-6(3*4/2)
+# 3 8 + 4 / 6 3 4 * 2 / - *
+
+# Funkcja NWD(a, b):
+#     Jeśli b == 0:
+#         Zwróć a
+#     W przeciwnym razie:
+#         Zwróć NWD(b, a modulo b)
+
+# Symulacja kroków dla a = 35 i b = 56:
+# 1. NWD(35, 56)
+# 2. NWD(56, 35)
+# 3. NWD(35, 21)
+# 4. NWD(21, 14)
+# 5. NWD(14, 7)
+# 6. NWD(7, 0)
+# 7. Zwróć 7
+
+# def c(napis):
+#     ilosc_C = 0
+#     for litera in napis:
+#         if litera == 'C':
+#             ilosc_C += 1
+#     return ilosc_C
+
+# napis = input()
+
+# ilosc = c(napis)
+
+# print(ilosc)
+
+# def czy_rosnacy(napis):
+#     for i in range(len(napis) - 1):
+#         if napis[i] < napis[i+1]:
+#             return False
+#     return True
+
+
+# napis = input()
+
+# czy_nierosnace = czy_rosnacy(napis)
+
+# if czy_rosnacy:
+#     print("Litery w napisie są w porządku nierosnącym.")
+# else:
+#     print("Litery w napisie nie są w porządku nierosnącym.")
+
+# wyraz1 = input()
+# wyraz2 = input()
+# wyraz3 = input()
+
+# najdluzszy_wyraz = wyraz1
+
+# if len(wyraz2) > len(najdluzszy_wyraz):
+#     najdluzszy_wyraz = wyraz2
+
+# if len(wyraz3) > len(najdluzszy_wyraz):
+#     najdluzszy_wyraz = wyraz3
+
+# print(najdluzszy_wyraz)
